@@ -1,6 +1,3 @@
-<?php
-  session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,10 +55,15 @@ $(document).ready(function(){
     });
   });
 });
+	$(document).ready(function () {
+		$(".select2").select2();
+                generarClave();
+	});
+        
 </script>
 
 </head>
-<body>
+<body onload="generarClave">
 
 <!-- Page container -->
 <div class="page-container">
@@ -301,11 +303,19 @@ $(document).ready(function(){
            </div>
            <div class="form-group">
            <label for="password">Password</label>
-           <input type="password" class="form-control" id="password" name="password" placeholder="ContraseÃ±a">
+           <input type="text" class="form-control" id="password" name="password" placeholder="Contraseña">
            </div>
            <div class="form-group">
            <label for="firstname">Nombre</label>
-           <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Nombres">
+           <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Nombre de usuario" onkeypress="generarClave()">
+           <label for="rol">Rol</label>
+           <!--<input type="text" class="form-control" id="rol" name="rol" placeholder="Seleccione el rol">-->
+           <select id="rol_select" onchange="generarClave()">
+                <option id="administrador" value="administrador">Administrador</option>
+                <option id="alumno" value="alumno">Alumno</option>
+                <option id="docente" value="docente">Docente</option>
+                <option id="administrativo" value="administrativo">Administrativo</option>
+           </select>
            </div>
            
 
@@ -331,9 +341,13 @@ $(document).ready(function(){
 <script src="js/plugins/select2/select2.full.min.js"></script>
 <script src="js/functions.js"></script>
 <script>
-	$(document).ready(function () {
-		$(".select2").select2();
-	});
-</script>
+    function generarClave(){
+            var año="2018_";
+            var nombre_usuario=$("#firstname").val();
+            var rol=$("#rol_select").val();
+            $("#password").val(año+nombre_usuario+"_"+rol);
+            //alert($("#firstname").val());
+    }
+    </script>
 </body>
 </html>

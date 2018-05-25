@@ -73,31 +73,31 @@
   <div class="main-container">
 
 	<!-- Main header -->
-	<div class="main-header row gray-bg">
-      <div class="col-sm-6 col-xs-7">
+    <div class="main-header row gray-bg">
+        <div class="col-sm-6 col-xs-7">
 
-		<!-- User info -->
-        <ul class="user-info pull-left">
-          <li class="profile-info dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"> <img width="44" class="img-circle avatar" alt="" src="images/man-3.jpg"> <span class="caret"></span></a>
+                    <!-- User info -->
+            <ul class="user-info pull-left">
+              <li class="profile-info dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"> <img width="44" class="img-circle avatar" alt="" src="images/man-3.jpg"> <span class="caret"></span></a>
 
-			<!-- User action menu -->
-            <ul class="dropdown-menu">
+                            <!-- User action menu -->
+                <ul class="dropdown-menu">
 
-             	       <li><a href="logout.php" ><i class="icon-logout"></i>Logout</a></li>
+                           <li><a href="logout.php" ><i class="icon-logout"></i>Logout</a></li>
+                </ul>
+                            <!-- /user action menu -->
+
+              </li>
             </ul>
-			<!-- /user action menu -->
 
-          </li>
-        </ul>
-	
-      </div>
-
+        </div>
+    </div>
       <div class="col-sm-6 col-xs-5">
 	  	
       </div>
-    </div>
+</div>
 	<!-- /main header -->
-    </script>
+
 	
       
 
