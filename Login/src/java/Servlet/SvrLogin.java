@@ -75,6 +75,7 @@ public class SvrLogin extends HttpServlet {
         }
         request.setAttribute("Seg_Usuario", resultado);
         request.getRequestDispatcher("Login.jsp").forward(request, response);
+        
     }
     
     private void IntentoErroneo(String cod_usuario, Integer intentos_actuales){
