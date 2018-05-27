@@ -7,6 +7,7 @@ package Servlet;
 
 import Conexion.ConexionBD;
 import Modelo.Seg_Usuario;
+import Threads.DesbloquearUsuario;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -35,6 +36,19 @@ public class SvrLogin extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+    @Override
+    public void init(){
+        try {
+            super.init();
+            DesbloquearUsuario des=new DesbloquearUsuario();
+            Thread min=new Thread(des);
+            min.start();
+        } catch (ServletException ex) {
+            Logger.getLogger(SvrLogin.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
