@@ -4,9 +4,25 @@
         <servlet-name>SvrLogin</servlet-name>
         <servlet-class>Servlet.SvrLogin</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SvrTarea</servlet-name>
+        <servlet-class>Servlet.SvrTarea</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SvrAsignaturas</servlet-name>
+        <servlet-class>Servlet.SvrAsignaturas</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SvrLogin</servlet-name>
         <url-pattern>/SvrLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvrTarea</servlet-name>
+        <url-pattern>/SvrTarea</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvrAsignaturas</servlet-name>
+        <url-pattern>/SvrAsignaturas</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
